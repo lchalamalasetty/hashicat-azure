@@ -16,8 +16,8 @@ resource "azurerm_resource_group" "myresourcegroup" {
   location = var.location
 
   tags = {
-    environment = "Production",
-    department  = "devops"
+    environment = "Production"
+    
   }
 }
 
@@ -137,6 +137,7 @@ resource "azurerm_virtual_machine" "catapp" {
   }
 
   tags = {
+    department  = "devops",
     billable = true
   }
 
